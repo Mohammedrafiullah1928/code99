@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time Table</title>
+<style>
+    body {
+        
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        margin-top: 100px;
+        background-color: orange;
+        text-align: center;
+        padding: 10px;
+        color: black;
+        
+    }
+    table {
+        margin-top: 0px;
+        border-collapse: collapse;
+        width: 100%;
+        text-align: center;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+    }
+    th {
+        background-color: lightblue;
+    }
+    .day {
+        background-color: green;
+        color: white;
+        font-weight: bold;
+    }
+    .sports {
+        background-color: darkgreen;
+        color: white;
+        font-weight: bold;
+    }
+    .lunch {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<h1>TIME TABLE</h1>
+
+<table>
+    <tr>
+        <th>Day/periods</th>
+        <th>I<br>9.30 to 10.20</th>
+        <th>II<br>10.20 to 11.10</th>
+        <th>III<br>11.10 to 12.00</th>
+        <th>12.00 to 12.40</th>
+        <th>IV<br>12.40 to 1.30</th>
+        <th>V<br>1.30 to 2.20</th>
+        <th>VI<br>2.20 to 3.10</th>
+        <th>VII<br>3.10 to 4.00</th>
+    </tr>
+    <tr>
+        <td class="day">MONDAY</td>
+        <td>TAMIL</td>
+        <td>MATHS</td>
+        <td>SCIENCE</td>
+        <td rowspan="6" class="lunch">LUNCH</td>
+        <td>ENGLISH</td>
+        <td>PHYSICS</td>
+        <td>SOCIAL</td>
+        <td>SCIENCE</td>
+    </tr>
+    <tr>
+        <td class="day">TUESDAY</td>
+        <td colspan="2">LABORATORY</td>
+        <td></td>
+        <td>ENGLISH</td>
+        <td>PHYSICS</td>
+        <td>SOCIAL</td>
+        <td class="sports">SPORTS</td>
+    </tr>
+    <tr>
+        <td class="day">WEDNESDAY</td>
+        <td>TAMIL</td>
+        <td>MATHS</td>
+        <td>SCIENCE</td>
+        <td>ENGLISH</td>
+        <td colspan="2">LIBRARY</td>
+        <td>SCIENCE</td>
+    </tr>
+    <tr>
+        <td class="day">THURSDAY</td>
+        <td>TAMIL</td>
+        <td>MATHS</td>
+        <td>SCIENCE</td>
+        <td>ENGLISH</td>
+        <td>PHYSICS</td>
+        <td>SOCIAL</td>
+        <td>SCIENCE</td>
+    </tr>
+    <tr>
+        <td class="day">FRIDAY</td>
+        <td>TAMIL</td>
+        <td>MATHS</td>
+        <td>SCIENCE</td>
+        <td>ENGLISH</td>
+        <td>PHYSICS</td>
+        <td colspan="2">LABORATORY</td>
+    </tr>
+    <tr>
+        <td class="day">SATURDAY</td>
+        <td>TAMIL</td>
+        <td>MATHS</td>
+        <td>SCIENCE</td>
+        <td>ENGLISH</td>
+        <td>PHYSICS</td>
+        <td>SOCIAL</td>
+        <td class="sports">SPORTS</td>
+    </tr>
+</table>
+
+</body>
+</html>

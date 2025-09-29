@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <style>
+            input[type="radio"]:checked+label {
+                color: red;
+            }
+            input[type="radio"]:not(:checked)+label {
+                color: blue;
+            }
+            /* 
+            li:nth-child(odd) {
+                color: rgb(235, 8, 114);
+            }
+            p:nth-of-type(2n) {
+                background-color: rgb(202, 21, 21);
+            }
+            */
+            li:only-child {
+                font-weight: bold;
+                color:blueviolet
+            }
+            p:only-child{
+                font-weight: bold;
+                color: aquamarine;
+            }
+            div:empty{
+                height: 50px;
+                border: 2px solid black;
+                background-color: lightgray;
+                margin-bottom: 20px;
+
+            }
+
+         </style>
+    </head>
+    <body>
+        <form action="#">
+        <input type="radio" name="group1">
+        <label >option 1</label>
+        <input type="radio" name="group1">
+        <label >option 2</label>
+        </form>
+        <ul>
+        <li>Apple</li>
+        </ul>
+        <ul>
+        <li>Banana</li>
+        <li>Cherry</li>
+        <li>Date</li>
+        <li>Elderberry</li>
+        <li>Fig</li>
+        <li>Grape</li>
+        <li>Honeydew</li>
+        <li>Indian Fig</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae inventore nesciunt rerum recusandae numquam aspernatur voluptates explicabo accusantium. Non nihil voluptatum sit earum quidem accusamus totam aliquid. Magni, magnam esse!</p>
+        <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae inventore nesci
+        </p></div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae esse illum facilis, repudiandae dolore autem perspiciatis libero, ipsum obcaecati, maxime voluptates rem fugit excepturi. Quaerat asperiores saepe soluta modi necessitatibus.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A repellendus unde praesentium fugit quam in aliquid illum nulla optio saepe fugiat, ad excepturi minima enim expedita vel cupiditate debitis nam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae inventore nesciunt rerum recusandae numquam aspernatur voluptates explicabo accusantium. Non nihil voluptatum sit earum quidem accusamus totam aliquid. Magni, magnam esse!</p>        
+        <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae inventore nesciunt rerum recusandae numquam aspernatur voluptates explicabo accusantium. Non nihil voluptatum sit earum quidem accusamus totam aliquid. Magni, magnam esse!</p>        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae inventore nesciunt rerum recusandae numquam aspernatur voluptates explicabo accusantium. Non nihil voluptatum sit earum quidem accusamus totam aliquid. Magni, magnam esse!</p>        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae inventore nesciunt rerum recusandae numquam aspernatur voluptates explicabo accusantium. Non nihil voluptatum sit earum quidem accusamus totam aliquid. Magni, magnam esse!</p>        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae inventore nesciunt rerum recusandae numquam aspernatur voluptates explicabo accusantium. Non nihil voluptatum sit earum quidem accusamus totam aliquid. Magni, magnam esse!</p>        
+
+        </div>
+        <div></div>
+        <div></div>
+    </body>
+</html>

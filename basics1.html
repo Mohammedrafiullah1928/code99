@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .johncena {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .info {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px; 
+        }
+        .name {
+            font-size: 30px;
+            font-weight: bolder;
+            text-transform: uppercase;
+            color: seagreen;
+            margin-bottom: 10px;
+        }
+        .p {
+            font-size: 15px;
+            color: greenyellow;
+        }
+        .image-stack {
+            position: relative;
+            width: 400px;
+            height: 600px;
+        }
+        .front-img {
+            position: relative;
+            z-index: 2;
+            width: 400px;
+            height: 600px;
+            display: block;
+        }
+        .back-img {
+            position:absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 400px;
+            height: 600px;
+            transition: left 1s;
+        }
+        .image-stack:hover .back-img {
+            left: 400px; 
+            cursor: zoom-in;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="johncena">
+            <div class="image-stack">
+            <img class="front-img" src="https://www.usanetwork.com/sites/usablog/files/2022/06/wwe-john-cena-attitude-adjustment.jpg" />
+            <img class="back-img" src="https://i.kym-cdn.com/photos/images/original/000/847/521/784.jpg " />
+            </div>
+            <div class="info">
+            <h1 class="name">Naan than john cena</h1>
+            <p class="p">you cant see me !!!!</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Workshop Poster</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a12;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .poster-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: linear-gradient(135deg, #12122a 0%, #1a1a3a 100%);
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0, 150, 255, 0.3);
+            overflow: hidden;
+            position: relative;
+            border: 1px solid rgba(0, 150, 255, 0.2);
+        }
+        
+        .glow-effect {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0, 150, 255, 0.4) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(20px);
+            z-index: 0;
+        }
+        
+        .glow-1 {
+            top: -100px;
+            right: -100px;
+        }
+        
+        .glow-2 {
+            bottom: -50px;
+            left: -50px;
+            background: radial-gradient(circle, rgba(200, 0, 255, 0.3) 0%, transparent 70%);
+        }
+        
+        .header {
+            background: linear-gradient(90deg, #8B0000 0%, #6a0000 100%);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .college-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            margin: 0;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        
+        .department {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+            font-weight: 600;
+        }
+        
+        .workshop-title {
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .workshop-title h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            margin: 0;
+            background: linear-gradient(90deg, #ff4500, #ff8c00);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 15px rgba(255, 69, 0, 0.4);
+            letter-spacing: 3px;
+        }
+        
+        .workshop-title p {
+            font-size: 1.4rem;
+            margin: 10px 0 0;
+            color: #aaa;
+            font-style: italic;
+        }
+        
+        .date-banner {
+            background-color: rgba(0, 150, 255, 0.2);
+            border-left: 5px solid #0096ff;
+            padding: 15px;
+            margin: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 0 8px 8px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .date-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 150, 255, 0.1), transparent);
+            transform: translateX(-100%);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        
+        .date-banner h2 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #0096ff;
+        }
+        
+        .date-banner p {
+            margin: 0;
+            color: #ccc;
+            font-weight: 600;
+        }
+        
+        .content-section {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .highlights, .coordinators {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+        
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            margin-top: 0;
+            color: #ff8c00;
+            border-bottom: 2px solid rgba(255, 140, 0, 0.3);
+            padding-bottom: 5px;
+        }
+        
+        .highlight-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .highlight-icon {
+            color: #0096ff;
+            font-size: 1.5rem;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        
+        .highlight-text h3 {
+            margin: 0 0 5px;
+            font-size: 1.1rem;
+        }
+        
+        .highlight-text p {
+            margin: 0;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .coordinators-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .coordinators-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+        }
+        
+        .coordinators-list li::before {
+            content: '•';
+            color: #ff4500;
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .footer {
+            background: linear-gradient(90deg, #8B0000 0%, #6a0000 100%);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .faculty-info {
+            text-align: left;
+        }
+        
+        .faculty-info h3 {
+            margin: 0 0 10px;
+            font-size: 1.1rem;
+            color: #ff8c00;
+        }
+        
+        .faculty-info p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+        
+        .register-cta {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .register-btn {
+            background: linear-gradient(90deg, #ff4500, #ff8c00);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 0 15px rgba(255, 69, 0, 0.4);
+        }
+        
+        .register-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
+        }
+        
+        .qr-placeholder {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            color: black;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .content-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer {
+                grid-template-columns: 1fr;
+            }
+            
+            .workshop-title h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster-container">
+        <div class="glow-effect glow-1"></div>
+        <div class="glow-effect glow-2"></div>
+        
+        <div class="header">
+            <h1 class="college-name">ALLM MUHAMMED SALEGH COLLEGE OF ENGINEERING</h1>
+            <p class="department">DEPARTMENT OF ELECTRONICS AND COMMUNICATION ENGINEERING</p>
+        </div>
+        
+        <div class="workshop-title">
+            <h1>WORKSHOP ON IOT</h1>
+            <p>"Connect, Create, Control – The Future is Smart!"</p>
+        </div>
+        
+        <div class="date-banner">
+            <h2>18th AUGUST 2025</h2>
+            <p>FOR SECOND YEAR ECE STUDENTS</p>
+        </div>
+        
+        <div class="content-section">
+            <div class="highlights">
+                <h2 class="section-title">HIGHLIGHTS</h2>
+                
+                <div class="highlight-item">
+                    <div class="highlight-icon">🔌</div>
+                    <div class="highlight-text">
+                        <h3>Introduction to IoT</h3>
+                        <p>Foundations & Applications</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-item">
+                    <div class="highlight-icon">🖥️</div>
+                    <div class="highlight-text">
+                        <h3>Arduino Uno Projects</h3>
+                        <p>Build Your First IoT Device</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-item">
+                    <div class="highlight-icon">📡</div>
+                    <div class="highlight-text">
+                        <h3>ESP32 & ESP8266 Masterclass</h3>
+                        <p>Wireless Connectivity Demystified</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-item">
+                    <div class="highlight-icon">🗣️</div>
+                    <div class="highlight-text">
+                        <h3>Amazon Alexa Echo Dot</h3>
+                        <p>Voice-Controlled Smart Systems</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-item">
+                    <div class="highlight-icon">☁️</div>
+                    <div class="highlight-text">
+                        <h3>Cloud Data Analysis</h3>
+                        <p>Real-Time IoT Analytics</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="coordinators">
+                <h2 class="section-title">STUDENT COORDINATORS</h2>
+                <ul class="coordinators-list">
+                    <li>Mohamed Khalidh M</li>
+                    <li>Mohamed Muaath Rifath</li>
+                    <li>Syed Mohammed Aslam</li>
+                    <li>Mohamed Usman</li>
+                    <li>Mohammed Rafiullah</li>
+                    <li>Joohi Jhan</li>
+                    <li>Abdullah</li>
+                    <li>Hajira</li>
+                    
+                </ul>
+                
+                <h2 class="section-title" style="margin-top: 30px;">FACULTY COORDINATORS</h2>
+                <p>Prof. A. Mohamed Mydeen</p>
+                <p>Prof. Dr. A.S. Salma Banu (HOD/ECE)</p>
+                <p>Prof. Dr. A.S. Salma Banu (Principal)</p>
+                <p>Mr. Mohammed Salegh (Secretary)</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="faculty-info">
+                <h3>CONTACT FOR REGISTRATION</h3>
+                <p>Email: ece@amsengg.edu</p>
+                <p>Phone: +91 XXXX XXX XXX</p>
+            </div>
+            
+            <div class="register-cta">
+                <button class="register-btn">REGISTER NOW!</button>
+                <div class="qr-placeholder">
+                    Scan QR Code<br>for Registration
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

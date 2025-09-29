@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nike Black Shoe Product Card</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    body {
+        background-color: #7d7d7d;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+    .card {
+        background-color: white;
+        display: flex;
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 850px;
+        gap: 40px;
+    }
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    .choose-size {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    .sizes {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .sizes button {
+        background: none;
+        border: 1px solid #000;
+        padding: 5px 12px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.3s;
+    }
+    .sizes button:hover {
+        background: black;
+        color: white;
+    }
+    .details {
+        flex: 1;
+    }
+    .category {
+        color: #444;
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    .product-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0;
+    }
+    .price {
+        font-size: 22px;
+        font-weight: bold;
+        margin: 25px 0;
+    }
+    .description {
+        font-size: 14px;
+        color: #333;
+        line-height: 1.4;
+        margin-bottom: 30px;
+    }
+    .actions {
+        display: flex;
+        gap: 20px;
+    }
+    .actions button {
+        padding: 10px 20px;
+        border: 1px solid #000;
+        background: none;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.3s;
+    }
+    .actions button:hover {
+        background: black;
+        color: white;
+    }
+    .actions .wishlist {
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <!-- LEFT SIDE -->
+    <div class="left">
+        <img src="data:image/jpeg;base64,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" alt="Nike Black Shoe">
+        <p class="choose-size">choose size</p>
+        <div class="sizes">
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>10</button>
+            <button>11</button>
+            <button>12</button>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="details">
+        <p class="category">Men's Running Shoe</p>
+        <h2 class="product-title">Nike New Black Shoe</h2>
+        <p class="price">$160</p>
+        <p class="description">
+            The Nike New Black shoe from cushioning is responsive yet light-weight, durable yet soft.
+            This creates a sensation that not only enhances the feeling of moving forward, but makes running feel fun, too.
+        </p>
+        <div class="actions">
+            <button>ADD TO CART</button>
+            <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NVDIA Profile Card</title>
+
+  <!-- Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#000;
+      --card:#ffffff;
+      --green:#086c03;      /* lower panel */
+      --green-dark:#055002; /* buttons hover */
+      --txt:#0a0a0a;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      display:grid;
+      place-items:center;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:#111;
+    }
+
+    .card{
+      width:min(92vw, 420px);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,.5);
+      background:var(--card);
+    }
+
+    /* Top section */
+    .top{
+      padding:28px 28px 18px;
+      text-align:center;
+      background:#fff;
+    }
+    .logo{
+      width:150px; height:150px;
+      border-radius:50%;
+      margin:0 auto 14px;
+      display:block;
+      object-fit:cover; object-position:center;
+      box-shadow:0 6px 16px rgba(0,0,0,.25);
+    }
+    .title{
+      font-family:Merriweather, serif;
+      font-weight:900;
+      letter-spacing:1px;
+      color:#0b6a05;
+      font-size:28px;
+      margin:6px 0 4px;
+    }
+    .sub, .tagline{
+      font-size:14px;
+      color:#000000;
+      margin:2px 0;
+    }
+    .tagline{font-style:italic}
+
+    /* Bottom green panel */
+    .bottom{
+      background:var(--green);
+      color:#fff;
+      padding:26px 22px 18px;
+    }
+    .stat{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:10px 4px;
+    }
+    .label{
+      font-family:Merriweather, serif;
+      font-weight:900;
+      font-size:26px;
+      line-height:1.1;
+    }
+    .value{
+      font-family:Merriweather, serif;
+      margin-left:6px;
+      font-size:24px;
+      font-weight:700;
+      white-space:nowrap;
+    }
+    .label .value{font-weight:900}
+
+    .btn{
+      background:#0b0b0b;
+      color:#fff;
+      border:none;
+      border-radius:8px;
+      padding:10px 16px;
+      font-size:14px;
+      cursor:pointer;
+      transition:transform .08s ease, background .15s ease, opacity .15s ease;
+      opacity:.9;
+    }
+    .btn:hover{background:var(--green-dark); transform:translateY(-1px); opacity:1}
+
+    /* Social row */
+    .social{
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      margin-top:14px;
+      padding-bottom:6px;
+    }
+    .social a{
+      width:40px; height:40px;
+      display:grid; place-items:center;
+      border-radius:50%;
+      background:#fff;
+      color:#000;
+      text-decoration:none;
+      font-size:18px;
+      box-shadow:0 6px 14px rgba(0,0,0,.35);
+      transition:transform .12s ease, filter .15s ease;
+    }
+    .social a:hover{transform:translateY(-2px); filter:brightness(.95)}
+    .social .fb{color:#1877F2}
+    .social .tw{color:#1DA1F2}
+    .social .ig{color:#E1306C}
+    .social .in{color:#0A66C2}
+    .social .yt{color:#FF0000}
+
+    /* Small screens tweak */
+    @media (max-width:360px){
+      .label{font-size:22px}
+      .value{font-size:20px}
+      .btn{padding:8px 12px}
+    }
+  </style>
+</head>
+<body>
+
+  <article class="card">
+    <div class="top">
+      <!-- Replace src with your NVIDIA logo if you have it -->
+      <img class="logo" src="https://yt3.googleusercontent.com/btm1_PK-7VRUr9GY2D0UV_2XfbUZPBjghyptjSO1crsfN86HyTYDWPmUbq7JxC3H0Lxe_s067nA=s900-c-k-c0x00ffffff-no-rj" alt="NVIDIA Logo">
+      <h1 class="title">NVDIA</h1>
+      <p class="sub">Nvidia Corporation</p>
+      <p class="tagline">Professional line of GPU</p>
+    </div>
+
+    <div class="bottom">
+      <div class="stat">
+        <div class="label">Followers:<span class="value">1000</span></div>
+        <button class="btn">Follow +</button>
+      </div>
+
+      <div class="stat">
+        <div class="label">Following:<span class="value">100</span></div>
+        <button class="btn">Follow +</button>
+      </div>
+
+      <div class="stat">
+        <div class="label">Articles:<span class="value">1111</span></div>
+        <button class="btn">Read +</button>
+      </div>
+
+      <div class="social">
+        <a class="fb" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a class="tw" href="#" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+        <a class="ig" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a class="in" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a class="yt" href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </article>
+
+</body>
+</html>

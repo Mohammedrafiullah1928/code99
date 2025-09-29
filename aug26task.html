@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecommerce website</title>
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #147fe2;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            text-decoration: none;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+        }
+        #subtitle1 {
+            font-weight: bold;
+            color: blueviolet;
+            margin:40px 20px;
+            text-transform: capitalize;
+        }
+        #subtitle2 {
+            font-weight: bold;
+            color: blueviolet;
+            margin:40px 20px;
+            text-transform: capitalize;
+        }
+        .products {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            transform: translateY(20px);
+        }
+        .product-card:hover {
+            transform: translateY(20px);
+        }
+        .product-card {
+            border: 3px solid #ddd;
+            border-radius: 15px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            float: left;
+            width: 30%;
+            box-sizing: border-box;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+            box-shadow: #555;
+            margin-bottom: 40px;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: 300px;
+            border-radius: 5px;
+        }
+        .product-card h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .product-card p {
+            font-size: 1em;
+            color: #555;
+        }
+        .table {
+            width: 90%;
+            margin: 40px auto;
+            overflow: hidden;
+            border-collapse: collapse;
+            
+        }
+        table, th, td {
+            border: 2px solid #ddd;
+            margin-left: 250px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        footer {
+            background-color: #0a0a0a;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#subtitle1"><h1>product info </h1></a>
+        <a href="#subtitle2"><h1>product details </h1></a>
+        <a href="#subtitle3"><h1> contact </h1></a>
+    </header>
+    <h1 id="subtitle1"> Product info </h1>
+    <div class="products">
+        <div class="product-card">
+            <img src="20230205182457Redmi-Note-10S.jpeg" alt="Product 1">
+            <h2>Redmi Note 10S </h2>
+            <p>THe xiaomi note 10s is a smartphone that runs on android 11 with miui. it has a 6.43" AMOLEDdisplay with a resolution of 1080x2400 pixels 13.</p>
+        </div>
+        <div class="product-card">
+            <img src="hp_laptop.webp" alt="Product 2">
+            <h2>HP Laptop </h2>
+            <p>HP Laptop – Sleek design with powerful performance for work, study, and entertainment. Equipped with the latest processor, long-lasting battery, and crisp display for seamless productivity</p>
+        </div> 
+        <div class="product-card">
+            <img src="new_earpods.webp" alt="Product 3">
+            <h2> Sony earpods</h2> 
+            <p>Sony Earpods – Crystal-clear sound with deep bass and noise cancellation for an immersive audio experience. Lightweight, stylish, and designed for all-day comfort with long battery life. </p> 
+        </div>
+        <div class="product-card">
+            <img src="chair.jpg" alt="Product 4">
+            <h2>Steel chair</h2>
+            <p>Durable Steel Chair – Built with sturdy metal for long-lasting strength and stability. Sleek, modern design perfect for home, office, or outdoor use.</p>
+        </div>
+        <div class="product-card">
+            <img src="lenovo_lap_charger.jpg" alt="Product 5">
+            <h2>Lenovo Lap Charger</h2>
+            <p> Lenovo Laptop Charger – Fast, reliable, and safe charging designed for consistent performance. Compact and lightweight, perfect for home, office, or travel use.</p>
+        </div>
+        <div class="product-card">
+            <img src="shuttle2.webp" alt="Product 6">
+            <h2>Shuttle Bat</h2>
+            <p>High-Quality Shuttle Bat – Crafted from premium materials for durability and optimal performance. Perfect for players of all skill levels.</p>
+        </div>
+    </div>
+
+    <h1 id="subtitle2">Product details</h1>
+    <div class="details">
+        <table>
+            <tr>
+                <th>Product image</th>
+                <th>Product name</th>
+                <th>Product price</th>
+                <th>Product features</th>
+                <th>products ratings</th>
+            </tr>
+            <tr>
+                <td><img src="20230205182457Redmi-Note-10S.jpeg" alt="Product 1" style="width:100px;"></td>
+                <td>Redmi Note 10S</td>
+                <td>10999</td>
+                <td>6.43" AMOLED, 64MP Quad Camera, 5000mAh Battery</td>
+                <td>4.5/5</td>
+            </tr>
+            <tr>
+                <td><img src="hp_laptop.webp" alt="Product 2" style="width:100px;"></td>
+                <td>HP Laptop</td>
+                <td>45999</td>
+                <td>Intel i5, 8GB RAM, 512GB SSD, 15.6" FHD Display</td>
+                <td>4.3/5</td>
+            </tr>
+            <tr>
+                <td><img src="new_earpods.webp" alt="Product 3" style="width:100px;"></td>
+                <td>Sony Earpods</td>
+                <td>2999</td>
+                <td>Wireless, Noise Cancelling, 20 Hours Battery Life</td>
+                <td>4.6/5</td>
+            </tr>
+            <tr>
+                <td><img src="chair.jpg" alt="Product 4" style="width:100px;"></td>
+                <td>Steel Chair</td>
+                <td>1999</td>
+                <td>Durable Steel Frame, Comfortable Seat, Modern Design</td>
+                <td>4.2/5</td>
+            </tr>
+            <tr>
+                <td><img src="lenovo_lap_charger.jpg" alt="Product 5" style="width:100px;"></td>
+                <td>Lenovo Lap Charger</td>
+                <td>2499</td>
+                <td>65W Power, USB-C, Compact Design, Overcharge Protection</td>
+                <td>4.4/5</td>
+            </tr>
+            <tr>
+                <td><img src="shuttle2.webp" alt="Product 6" style="width:100px;"></td>
+                <td>Shuttle Bat</td>
+                <td>899</td>
+                <td>Lightweight, Durable, Excellent Control and Power</td>
+                <td>4.5/5</td>
+            </tr>
+        </table>
+    </div>
+    <footer>
+        <h2 id="subtitle3">Contact us </h2>
+        <h3>xyz@gmail.com</h3>
+        <h3> Follow us on Facebook</h3>
+    </footer>
+</body>
+</html>

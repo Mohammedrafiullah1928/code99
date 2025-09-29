@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile Card</title>
+  <style>
+    body {
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      width: 350px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 4px solid cyan;
+      margin-bottom: 15px;
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 14px;
+      color: #333;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+
+    .label {
+      font-weight: bold;
+      color: gray;
+      font-size: 13px;
+    }
+
+    .rate, .skills {
+      margin: 5px 0 15px;
+      font-size: 15px;
+      color: #000;
+    }
+
+    .skills-list {
+      font-size: 14px;
+      color: #000;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .btn {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-see-more {
+      background-color: #eee;
+    }
+
+    .btn-request {
+      background-color: aqua;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="./rafiimg.png" alt="Profile Picture" class="profile-img">
+    <div class="name">Mohammed rafiullah</div>
+    <div class="description">
+      some of the most common skills to have in this role. Some web developer skills include understanding HTML, general design skills and being analytical. Web designing & development and maintaining web-based applications.
+    </div>
+    <div class="label">Hourly Rate</div>
+    <div class="rate">$50.00/hr</div>
+
+    <div class="label">skills</div>
+    <div class="skills-list">
+      HTML, CSS, Python, JavaScript, React, Vue.js, UX, Performance, Accessibility
+    </div>
+
+    <div class="buttons">
+      <button class="btn btn-see-more">see more</button>
+      <button class="btn btn-request">Request a Question</button>
+    </div>
+  </div>
+</body>
+</html>
