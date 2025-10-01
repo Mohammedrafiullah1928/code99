@@ -1,0 +1,10 @@
+.sobaby
+{
+    height: 300px;
+    width: 500px;
+    overflow: auto;
+    font-size: larger;
+    margin: auto;
+    border: 10px solid blueviolet;
+    padding: 20px;
+}
