@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    overflow: hidden; 
+}
+
+.sky-scene {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #5BC0EB;
+}
+
+@keyframes fly {
+    0% {
+        transform: translate(-100vw, 50vh) rotate(0deg);
+    }
+    25% {
+        transform: translate(25vw, 40vh) rotate(90deg);
+    } 
+    /* 45%{
+        transform: translate(50vw, 30vh) rotate(-180deg);
+    } */
+    50% {
+        transform: translate(50vw, 30vh) rotate(-150deg);
+    } 
+    75% {
+        transform: translate(75vw, 20vh) rotate(-50deg);
+    }
+    100% {
+        transform: translate(100vw, -10vh) rotate(-10deg);
+    }
+}
+
+@keyframes drift {
+    0% { transform: translateX(100vw); }
+    100% { transform: translateX(-10vw); } 
+}
+
+@keyframes drive {
+    0% { transform: translateX(-10vw); }
+    100% { transform: translateX(100vw); } 
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 10px 10px rgba(255, 215, 0, 0.5); }
+    50% { box-shadow: 0 0 20px 20px rgba(255, 215, 0, 0.8); }
+}
+
+.sun {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 80px;
+    height: 80px;
+    background-color: #FFD700; 
+    border-radius: 50%;
+    animation: pulse 2s infinite alternate; 
+}
+
+.truck {
+    position: absolute;
+    bottom: 0px;
+    /* right: 50px;  */
+    width: 150px;
+    height: auto;
+    animation: drive 5s linear infinite;
+    
+}
+
+.airplane {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    z-index: 10;
+    animation: fly 4s ease-in-out infinite; 
+}
+
+.cloud {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    /* right: 150px;  */
+    animation: drift linear infinite;
+}
+
+.cloud-1 {
+    top: 150px;
+    width: 180px;
+    animation-duration: 25s;
+    /* animation-delay: 5s; */
+}
+
+.cloud-2 {
+    top: 60px;
+    width: 120px;
+    animation-duration: 18s;
+    /* animation-delay: 0s; */
+}
+
+.cloud-3 {
+    top: 250px;
+    animation-duration: 22s;
+    /* animation-delay: 10s; */
+}
