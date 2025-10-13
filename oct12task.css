@@ -1,0 +1,180 @@
+/* Basic Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000; /* Dark background */
+    color: #fff; /* White text */
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Hide content initially to prevent a flash of unstyled content before animation */
+    overflow-x: hidden; 
+}
+
+/* --- Keyframes for Animations --- */
+
+/* Animation for the Navigation Bar (from top) */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animation for the Left Content (from left) */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animation for the Car Image (from right) */
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    75% {
+        transform: translateX(-10%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-145%);
+        opacity: 1;
+    }
+}
+
+/* --- Navigation Bar Styling --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    /* Apply the animation */
+    animation: slideDown 0.8s ease-out forwards;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #e91e63; /* Pink color on hover */
+}
+
+/* --- Hero Section Styling --- */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 50px 50px 100px;
+    flex-grow: 1;
+}
+
+/* Left Content (Text and Buttons) */
+.content-left {
+    max-width: 50%;
+    /* Apply the animation */
+    animation: slideInLeft 1s ease-out forwards;
+    /* Start after the navbar */
+    animation-delay: 0.5s; 
+    opacity: 0; /* Ensure content is hidden before animation starts */
+}
+
+.content-left h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.muscle-car-text {
+    color: #e91e63;
+    font-weight: bold;
+}
+
+.slogan {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* Call-to-Action Buttons */
+.cta-buttons button {
+    padding: 10px 25px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary {
+    background-color: #e91e63;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #f06292;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Right Content (Image) */
+.content-right {
+    display: flex;
+    justify-content: center;
+    size: 100px;
+    align-items: center;
+    /* Apply the animation */
+    animation: slideInRight 1s ease-out forwards;
+    /* Start after the navbar and a bit after the left content */
+    animation-delay: 0.8s; 
+    opacity: 0; /* Ensure content is hidden before animation starts */
+}
+
+.content-right img {
+    max-width: 100%;
+    height: auto;
+}
