@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vada Chennai - Character Showcase</title>
+    <link rel="stylesheet" href="vadachennai.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <img src="vadachennaititlecard.png" alt="Vada Chennai Logo" class="logo">
+            </div>
+            <div class="nav-center">
+                <h3>oruthan setha mudiyira sandai ah da ithu</h3>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-right" id="navMenu">
+                <a href="#home">Home</a>
+                <a href="#characters">Characters</a>
+                <a href="#about">About Movie</a>
+                <a href="#gallery">Gallery</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="hero-overlay">
+            <img src="vadachennaititlecard.png" alt="Vada Chennai Logo" class="logo">
+            <p class="hero-tagline">Every story has a beginning, every legend has a past</p>
+        </div>
+    </section>
+
+    <section id="characters" class="characters-section">
+        <div class="section-container">
+            <h2 class="section-heading">Main Characters</h2>
+            <div class="characters-grid">
+                <div class="character-card">
+                    <div class="character-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Anbu">
+                    </div>
+                    <div class="character-info">
+                        <h3>Anbu</h3>
+                        <p class="actor-name">Dhanush</p>
+                        <p class="character-desc">A carrom player from North Chennai who gets entangled in the underworld politics spanning three decades.</p>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-image">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400" alt="Rajan">
+                    </div>
+                    <div class="character-info">
+                        <h3>Rajan</h3>
+                        <p class="actor-name">Ameer</p>
+                        <p class="character-desc">A ruthless gang leader who controls the area and has a complex relationship with Anbu's family.</p>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-image">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400" alt="Guna">
+                    </div>
+                    <div class="character-info">
+                        <h3>Guna</h3>
+                        <p class="actor-name">Samuthirakani</p>
+                        <p class="character-desc">Anbu's mentor and a key figure in the gang wars that defined North Chennai's criminal landscape.</p>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-image">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400" alt="Padma">
+                    </div>
+                    <div class="character-info">
+                        <h3>Padma</h3>
+                        <p class="actor-name">Aishwarya Rajesh</p>
+                        <p class="character-desc">Anbu's love interest who stands by him through the turbulent times and changing circumstances.</p>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-image">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400" alt="Senthil">
+                    </div>
+                    <div class="character-info">
+                        <h3>Senthil</h3>
+                        <p class="actor-name">Kishore</p>
+                        <p class="character-desc">A loyal friend and gang member who plays a crucial role in the power struggles of the area.</p>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-image">
+                        <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?w=400" alt="Chandra">
+                    </div>
+                    <div class="character-info">
+                        <h3>Chandra</h3>
+                        <p class="actor-name">Andrea Jeremiah</p>
+                        <p class="character-desc">A strong-willed woman caught in the crossfire of gang rivalries and personal vendettas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <h2 class="section-heading">About the Movie</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="movie-summary">
+                        Vada Chennai is a gripping Tamil gangster film that chronicles three decades of gang wars in North Chennai. 
+                        The story follows Anbu, a skilled carrom player who reluctantly becomes involved in the criminal underworld. 
+                        Through non-linear storytelling, the film explores themes of loyalty, revenge, and survival in one of Chennai's 
+                        most notorious neighborhoods. With powerful performances and realistic portrayal of gang politics, the movie 
+                        became a critical and commercial success.
+                    </p>
+                    <div class="movie-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Director:</span>
+                            <span class="detail-value">Vetrimaaran</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Release Year:</span>
+                            <span class="detail-value">2018</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Genre:</span>
+                            <span class="detail-value">Crime, Drama, Action</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Duration:</span>
+                            <span class="detail-value">164 minutes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="section-container">
+            <h2 class="section-heading">Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1574267432644-f74f8ec1e0d5?w=500" alt="Movie Still 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1594908900066-3f47337549d8?w=500" alt="Movie Still 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=500" alt="Movie Still 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=500" alt="Movie Still 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=500" alt="Movie Still 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=500" alt="Movie Still 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Fan-made site for educational purposes only.</p>
+        <p>&copy; 2024 Vada Chennai Tribute. All rights reserved to respective owners.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        document.querySelectorAll('.nav-right a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navMenu = document.getElementById('navMenu');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

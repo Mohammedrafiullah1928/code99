@@ -1,0 +1,82 @@
+/*
+ * GENERAL STYLES
+ */
+html, body {
+    /* Full screen black background */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    overflow: hidden; /* Prevent scrollbars from animation movement */
+}
+
+/*
+ * CONTAINER STYLES
+ */
+.container {
+    /* Position the container at the bottom center of the screen */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px; /* Space between boxes */
+    padding-bottom: 5px; /* Lift them slightly from the very bottom edge */
+}
+
+/*
+ * BOX STYLES
+ */
+.box {
+    width: 20px;
+    height: 20px;
+    /* Set up the animation properties */
+    animation-name: rippleMove;
+    animation-duration: 1.5s; /* Speed of the whole cycle */
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; /* Loop forever */
+    animation-direction: alternate; /* Moves forward and then reverses smoothly */
+}
+
+/*
+ * GRADIENT COLORS (Adjust these to match the video exactly)
+ */
+.box-1 {
+    /* Blue to Purple gradient */
+    background: linear-gradient(135deg, #4a42ff, #9c41ff);
+}
+
+.box-2 {
+    /* Purple to Lighter Blue gradient */
+    background: linear-gradient(135deg, #9c41ff, #2e96ff);
+}
+
+.box-3 {
+    /* Lighter Blue to Cyan gradient */
+    background: linear-gradient(135deg, #2e96ff, #42ffff);
+}
+
+/*
+ * ANIMATION DELAYS for the ripple effect
+ * These make the boxes move one after the other.
+ */
+.delay-1 {
+    animation-delay: 0.1s; /* Start moving 0.1s after the first box */
+}
+
+.delay-2 {
+    animation-delay: 0.2s; /* Start moving 0.2s after the first box */
+}
+
+/*
+ * KEYFRAME ANIMATION: Defines the actual movement
+ * It moves the box 10 pixels to the right.
+ */
+@keyframes rippleMove {
+    0% {
+        transform: translateX(0); /* Start position */
+    }
+    100% {
+        transform: translateX(10px); /* End position (10 pixels to the right) */
+    }
+}
