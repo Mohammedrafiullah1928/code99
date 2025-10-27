@@ -1,3 +1,7 @@
+* {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -32,6 +36,9 @@ body {
     background: linear-gradient(to right, #34495e, #2c3e50);
     padding: 15px;
     gap: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .nav a {
@@ -64,6 +71,81 @@ body {
 .banner p {
     font-size: 18px;
     margin: 15px 0 0 0;
+    color: #bdc3c7;
+}
+
+.intro {
+    text-align: center;
+    padding: 60px 100px;
+    background: linear-gradient(to right, #1a252f, #2c3e50);
+}
+
+.intro h2 {
+    font-size: 32px;
+    color: #d4af37;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #bdc3c7;
+    margin-bottom: 15px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    padding: 30px;
+    border: 2px solid #d4af37;
+    text-align: center;
+    width: 280px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+.feature-card h3 {
+    color: #d4af37;
+    font-size: 22px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.feature-card p {
+    color: #bdc3c7;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.section-header {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    color: #d4af37;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.section-header p {
+    font-size: 18px;
     color: #bdc3c7;
 }
 
@@ -100,6 +182,13 @@ body {
     font-size: 20px;
     margin: 10px 0;
     color: #ecf0f1;
+}
+
+.card .desc {
+    font-size: 14px;
+    color: #95a5a6;
+    margin: 10px 0;
+    font-style: italic;
 }
 
 .price {
@@ -144,6 +233,117 @@ body {
     color: #bdc3c7;
 }
 
+.contact-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    color: #d4af37;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.contact-intro {
+    font-size: 18px;
+    color: #bdc3c7;
+    margin-bottom: 50px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #d4af37;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #34495e;
+    color: #ecf0f1;
+    font-size: 16px;
+    font-family: 'Georgia', serif;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #d4af37;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.submit-btn {
+    background-color: #d4af37;
+    color: #1a252f;
+    border: none;
+    padding: 15px 35px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #f4d03f;
+    transform: translateY(-2px);
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    text-align: left;
+}
+
+.info-box {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    border: 2px solid #d4af37;
+}
+
+.info-box h3 {
+    color: #d4af37;
+    font-size: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.info-box p {
+    color: #bdc3c7;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
 .footer {
     background: linear-gradient(to right, #1a252f, #2c3e50);
     text-align: center;
@@ -156,4 +356,24 @@ body {
     font-size: 14px;
     color: #95a5a6;
     letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .intro {
+        padding: 40px 20px;
+    }
+    
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-section {
+        padding: 40px 20px;
+    }
 }
