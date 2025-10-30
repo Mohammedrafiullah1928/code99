@@ -6,7 +6,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Georgia', serif;
-    background: linear-gradient(135deg, #2c3e50, #34495e, #1a252f);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('Gemini_Generated_Image_s0b1eds0b1eds0b1.png') center/cover no-repeat fixed;
     color: #ecf0f1;
 }
 
